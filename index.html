@@ -5,7 +5,6 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
-    <script src="public/js/require.js" data-main="./public/js/main"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -44,12 +43,18 @@
                     <div id="nav-menu">
                         <div class="nav_menu_wrap">
                             <div class="nav_menu_left">
-                                <a href="">магазин</a>
-                                <a class="about" >о нас</a>
-                                <a class="cooperation" >сотрудничество</a>
-                                <a class="delivery" >доставка и оплата</a>
+                                <a class="shop">магазин</a>
+                                <a class="about">о нас</a>
+                                <a class="cooperation">сотрудничество</a>
+                                <a class="delivery">доставка и оплата</a>
                             </div>
                             <div class="nav_menu_right">
+                                <div id="shop" class="menu_right_text">
+                                    <a href="#">Букеты</a>
+                                    <a href="#">Композиции</a>
+                                    <a href="#">Декор</a>
+                                    <a href="#">Комнатные растения</a>
+                                </div>
                                 <div id="about" class="menu_right_text">
                                     <h3>Цветочный</h3>
                                     <span>Прекрасный магазин в удобном месте. Всегда свежие цветы, оригинальные букеты.</span>
@@ -57,13 +62,16 @@
                                 </div>
                                 <div id="cooperation" class="menu_right_text">
                                     <h3>Предложения сотрудничества </h3>
-                                    <span>096-609-12-55 lazutikovnikita@gmail.com </span>
-                                    <span>Корпоративные и оптовые заказы </span>
-                                    <span>096-609-12-55 corporative@gmail.com</span>
+                                    <span>096-609-12-55 </span>
+                                    <span>lazutikovnikita@gmail.com</span>
+                                    <h3>Корпоративные и оптовые заказы </h3>
+                                    <span>096-609-12-55</span>
+                                    <span>corporative@gmail.com</span>
                                 </div>
                                 <div id="delivery" class="menu_right_text">
                                     <h3>Доставка курьреом</h3>
-                                    <span>Харькову - 50 гривен за город - 50 гривен</span>
+                                    <span>Харькову - 50 гривен</span>
+                                    <span>за город - 50 гривен</span>
                                     <span>Бесплатная доставка <strong>от 1 000 гривен</strong> </span>
                                 </div>
 
@@ -74,8 +82,17 @@
             </div>
         </div>
     </header>
-    <section id="main"></section>
+    <section id="video"
+             data-vide-bg="mp4: public/images/DaisyFlower, poster: public/images/ocean"
+             data-vide-options="posterType: jpg, loop: true, muted: true, position: 0% 0%">
+
+    </section>
     <footer id="footer"></footer>
 </div>
+
+<script src="public/js/jquery.js"></script>
+<script src="public/js/jquery.vide.js"></script>
+<script src="public/js/main.js"></script>
 </body>
+
 </html>
