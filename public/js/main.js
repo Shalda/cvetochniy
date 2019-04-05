@@ -9,6 +9,7 @@ function toggleClass() {
 document.querySelector('.nav_menu_left').addEventListener("mouseover", ClassText);
 
 function ClassText(e) {
+
     const classMenu = e.target.className;
     if (classMenu) {
         switch (classMenu) {
