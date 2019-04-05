@@ -6,7 +6,7 @@ function toggleClass() {
     document.getElementById(['nav-menu']).classList.toggle('open')
 }
 
-document.querySelector('.nav_menu_left').addEventListener("mouseover", ClassText);
+document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
 
 function ClassText(e) {
 
