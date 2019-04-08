@@ -3,7 +3,8 @@ document.getElementById(['nav-icon1']).addEventListener("click", toggleClass);
 
 function toggleClass() {
     this.classList.toggle('open');
-    document.getElementById(['nav-menu']).classList.toggle('open')
+    document.getElementById(['nav-menu']).classList.toggle('open');
+    document.querySelector('.navbar_menu').classList.toggle('link_disable')
 }
 
 document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
