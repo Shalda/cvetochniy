@@ -1,4 +1,5 @@
 "use strict";
+//hamburger
 document.getElementById(['nav-icon1']).addEventListener("click", toggleClass);
 
 function toggleClass() {
@@ -7,10 +8,10 @@ function toggleClass() {
     document.querySelector('.navbar_menu').classList.toggle('link_disable')
 }
 
+//text on dropdown menu
 document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
 
 function ClassText(e) {
-
     const classMenu = e.target.className;
     if (classMenu) {
         switch (classMenu) {
@@ -31,7 +32,6 @@ function ClassText(e) {
         }
     }
 }
-
 function classTextToogle(e) {
     let olreadyOpen = document.querySelector('.menu_right_text.open');
     if (olreadyOpen) {
@@ -40,4 +40,10 @@ function classTextToogle(e) {
     document.getElementById(e).classList.add('open');
 
 }
-document.getElementById('video').style.height = (document.documentElement.clientHeight - 170) + 'px';
+
+//video fullscreen size
+let video = document.getElementById('video');
+if (video) {
+    video.style.height = (document.documentElement.clientHeight - 170) + 'px';
+}
+

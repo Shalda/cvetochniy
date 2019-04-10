@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang=ru>
 <head>
+    <title>Shop</title>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
@@ -83,18 +85,105 @@
         </div>
     </header>
     <section>
-        <div id="video">
-            <video autoplay muted loop>
-                <source src="public/images/DaisyFlower.mp4" type="video/mp4">
-            </video>
+        <div class="sidebars_wrapper">
+            <div class="sidebar-left">
+                <div class="sidebar-left-wrapper">
+                    <h2>магазин</h2>
+                    <div class="sidebar-left_list">
+                        <div class="sidebar-left-list-elem">
+                            <h3><a class="navLink" href="#"> Букеты</a></h3>
+                            <ul>
+                                <li><a class="navLink" href="#"> Букет в каркасе</a></li>
+                                <li><a class="navLink" href="#"> Последняя коллекция</a></li>
+                                <li><a class="navLink" href="#"> Мужской букет</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-left-list-elem">
+                            <h3><a class="navLink" href="#"> Композиция</a></h3>
+                            <ul>
+                                <li><a class="navLink" href="#"> Последняя коллекция</a></li>
+                                <li><a class="navLink" href="#"> Интерьерная композиция</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-left-list-elem">
+                            <h3><a class="navLink" href="#"> Декор</a></h3></div>
+                        <div class="sidebar-left-list-elem">
+                            <h3><a class="navLink" href="#"> Комнатные растения</a></h3></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="sidebar-right_wrapper">
+                    <div class="filter-catalog">
+                        <div class="navLink">сначала дорогие</div>
+                        <div class="navLink">сначала дешевые</div>
+                        <div class="navLink">сначала новинки</div>
+                    </div>
+                    <div class="catalog-wrapper">
+                        <div class="catalog-item">
+                            <div class="catalog-item__img">
+                                <img src="public/images/Rose1.jpg" alt="Обои">
+                            </div>
+                            <div class="catalog-item__name">Букет из тюльпанов</div>
+                            <div class="catalog-item__prices">Цена: <strong>150грн</strong>
+                            </div>
+                            <button class="catalog-item__btn">Купить</button>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-item__img">
+                                <img src="public/images/Rose2.jpg" alt="Обои">
+                            </div>
+                            <div class="catalog-item__name">Букет из тюльпанов</div>
+                            <div class="catalog-item__prices">Цена: <strong>150грн</strong>
+                            </div>
+                            <button class="catalog-item__btn">Купить</button>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-item__img">
+                                <img src="public/images/Rose1.jpg" alt="Обои">
+                            </div>
+                            <div class="catalog-item__name">Букет из тюльпанов</div>
+                            <div class="catalog-item__prices">Цена: <strong>150грн</strong>
+                            </div>
+                            <button class="catalog-item__btn">Купить</button>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-item__img">
+                                <img src="public/images/Rose2.jpg" alt="Обои">
+                            </div>
+                            <div class="catalog-item__name">Букет из тюльпанов</div>
+                            <div class="catalog-item__prices">Цена: <strong>150грн</strong>
+                            </div>
+                            <button class="catalog-item__btn">Купить</button>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-item__img">
+                                <img src="public/images/Rose1.jpg" alt="Обои">
+                            </div>
+                            <div class="catalog-item__name">Букет из тюльпанов</div>
+                            <div class="catalog-item__prices">Цена: <strong>150грн</strong>
+                            </div>
+                            <button class="catalog-item__btn">Купить</button>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-item__img">
+                                <img src="public/images/Rose2.jpg" alt="Обои">
+                            </div>
+                            <div class="catalog-item__name">Букет из тюльпанов</div>
+                            <div class="catalog-item__prices">Цена: <strong>150грн</strong>
+                            </div>
+                            <button class="catalog-item__btn">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
     <footer id="footer">
         <div class="footer">
             <div class="footer_elem footer_social">
                 <a class="navLink" href="">Instagram</a><a class="navLink" href="">Linkedin</a><a class="navLink"
-                                                                                                   href="">Facebook</a>
+                                                                                                  href="">Facebook</a>
             </div>
             <div class="footer_elem footer_adress"><span>Сумская 77/79 (напротив ЛетоПарка)</span>
                 <a class="navbar-phone" href="tel:+380956979520">095&#8209;697&#8209;95&#8209;20</a></div>
@@ -105,5 +194,4 @@
 <script src="public/js/jquery.js"></script>
 <script src="public/js/main.js"></script>
 </body>
-
 </html>
