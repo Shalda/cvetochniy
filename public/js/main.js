@@ -32,6 +32,7 @@ function ClassText(e) {
         }
     }
 }
+
 function classTextToogle(e) {
     let olreadyOpen = document.querySelector('.menu_right_text.open');
     if (olreadyOpen) {
@@ -46,4 +47,30 @@ let video = document.getElementById('video');
 if (video) {
     video.style.height = (document.documentElement.clientHeight - 170) + 'px';
 }
+
+//popup
+
+$('.catalog-item__img img').click(function () {
+    console.log('asdfas');
+    $('.js-overlay-campaign').fadeIn();
+    $('.js-overlay-campaign img').attr('src', $(this).attr('src'));
+    $('.js-overlay-campaign').addClass('disabled');
+
+ });
+
+// закрыть на крестик
+$('.js-close-campaign').click(function () {
+    $('.js-overlay-campaign').fadeOut();
+
+});
+
+// закрыть по клику вне окна
+$(document).mouseup(function (e) {
+    var popup = $('.js-popup-campaign');
+    if (e.target != popup[0] && popup.has(e.target).length === 0) {
+        $('.js-overlay-campaign').fadeOut();
+
+    }
+});
+
 
