@@ -5,7 +5,7 @@ document.getElementById(['nav-icon1']).addEventListener("click", toggleClass);
 function toggleClass() {
     this.classList.toggle('open');
     document.getElementById(['nav-menu']).classList.toggle('open');
-    document.querySelector('.navbar_menu').classList.toggle('link_disable')
+    document.querySelector('.navbar_menu').classList.toggle('link_disable');
 }
 
 //text on dropdown menu
@@ -56,7 +56,7 @@ $('.catalog-item__img img').click(function () {
     $('.js-overlay-campaign img').attr('src', $(this).attr('src'));
     $('.js-overlay-campaign').addClass('disabled');
 
- });
+});
 
 // закрыть на крестик
 $('.js-close-campaign').click(function () {
@@ -72,5 +72,8 @@ $(document).mouseup(function (e) {
 
     }
 });
+
+
+
 
 
