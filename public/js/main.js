@@ -50,8 +50,7 @@ if (video) {
 
 //popup
 
-$('.catalog-item__img img').click(function () {
-    console.log('asdfas');
+$('.product-card__img img').click(function () {
     $('.js-overlay-campaign').fadeIn();
     $('.js-overlay-campaign img').attr('src', $(this).attr('src'));
     $('.js-overlay-campaign').addClass('disabled');
