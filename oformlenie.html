@@ -1,11 +1,9 @@
-<!doctype html>
-<html lang=ru>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Product</title>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oformlenie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
@@ -94,27 +92,12 @@
         <div class="sidebars_wrapper">
             <div class="sidebar-left">
                 <div class="sidebar-left-wrapper">
-                    <h2>магазин</h2>
+                    <h2>Оформление</h2>
                     <div class="sidebar-left_list">
                         <div class="sidebar-left-list-elem">
-                            <h3><a class="navLink" href="#"> Букеты</a></h3>
-                            <ul>
-                                <li><a class="navLink" href="#"> Букет в каркасе</a></li>
-                                <li><a class="navLink" href="#"> Последняя коллекция</a></li>
-                                <li><a class="navLink" href="#"> Мужской букет</a></li>
-                            </ul>
-                        </div>
+                            <h3><a class="navLink" href="#"> Фотозоны</a></h3></div>
                         <div class="sidebar-left-list-elem">
-                            <h3><a class="navLink" href="#"> Композиция</a></h3>
-                            <ul>
-                                <li><a class="navLink" href="#"> Последняя коллекция</a></li>
-                                <li><a class="navLink" href="#"> Интерьерная композиция</a></li>
-                            </ul>
-                        </div>
-                        <div class="sidebar-left-list-elem">
-                            <h3><a class="navLink" href="#"> Декор</a></h3></div>
-                        <div class="sidebar-left-list-elem">
-                            <h3><a class="navLink" href="#"> Комнатные растения</a></h3></div>
+                            <h3><a class="navLink" href="#">Оформление интерьеров</a></h3></div>
                     </div>
                 </div>
             </div>
@@ -131,29 +114,57 @@
                               fill="white"/>
                     </svg>
                 </div>
-                <div class="product-card__wrapper">
-                        <div class="product-card__left">
-                            <div class="product-card__img">
-                                <img id="productImg" src="public/images/Rose1.jpg" alt="Обои">
+                <div class="visual__wrapper">
+                    <div class="visual__left">
+                        <div class="visual__slider slider-for">
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie1.jpg" alt="slider image">
+                            </div>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie2.jpg" alt="slider image">
+                            </div>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie3.jpg" alt="slider image">
+                            </div>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie4.jpg" alt="slider image">
+                            </div>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie5.jpg" alt="slider image">
                             </div>
                         </div>
-                        <div class="product-card__right">
-                            <div class="product-card__name" id="productName">Букет из тюльпанов</div>
-                            <div class="product-card__description">
-                                <span class="product-card__small-text" > Описание</span>
-                                <span id="productDesc">Нежный букет в упаковке из дабл тюльпанов и ароматной сирени. Ножку букета украшает бант из натуральной рафии</span>
+                        <div class="visual__slider slider-nav">
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie1.jpg" alt="slider image">
                             </div>
-                            <div class="product-card__size">
-                                <span class="product-card__small-text" >Диаметр</span>
-                                <span id="productSize">10 см</span>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie2.jpg" alt="slider image">
                             </div>
-                            <div class="product-card__prices">
-                                <span class="product-card__small-text" >Цена</span>
-                                <span id="productPrice">500 грн</span>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie3.jpg" alt="slider image">
                             </div>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie4.jpg" alt="slider image">
+                            </div>
+                            <div class="visual__slider__slide">
+                                <img src="public/images/oformlenie5.jpg" alt="slider image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual__right">
+                        <div class="product-card__name " id="productName">Оформление фотозоны</div>
+                        <div class="product-card__description">
+                            <span class="product-card__small-text"> Описание</span>
+                            <span id="productDesc">Нежный букет в упаковке из дабл тюльпанов и ароматной сирени. Ножку букета украшает бант из натуральной рафии</span>
+                        </div>
+                        <div class="product-card__prices">
+                            <span class="product-card__small-text">Цена</span>
+                            <span id="productPrice">500 грн</span>
+                        </div>
 
-                            <div class="product-card__btn"><a href="#" class="product-button-buy">Купить</a></div></div>
-            </div>
+                        <div class="product-card__btn"><a href="#" class="product-button-buy">Заказать</a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -168,8 +179,8 @@
         </div>
     </footer>
 </div>
-
 <script src="public/js/jquery.js"></script>
+<script type="text/javascript" src="public/js/slick.js"></script>
 <script src="public/js/main.js"></script>
 <script type="text/javascript" src="https://spikmi.com/Widget?Id=603"></script>
 </body>
