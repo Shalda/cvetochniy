@@ -2,9 +2,11 @@ $(document).ready(function () {
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        // autoplay: true,
         arrows: true,
         fade: true,
-        asNavFor: '.slider-nav'
+        cssEase: 'linear',
+        asNavFor: '.slider-nav',
     });
     // $('.slider-for').mouseenter(function () {
     //    $('.slick-arrow').css('background-color', 'rgba(0, 0, 0, 0.25)');
