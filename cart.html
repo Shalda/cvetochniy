@@ -1,18 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Oformlenie</title>
+    <title>Контакты</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<div class="overlay js-overlay-campaign">
-    <div class="popup js-popup-campaign">
-        <img src="" alt="">
-        <div class="close-popup js-close-campaign"></div>
-    </div>
-</div>
 <div class="wrapper">
     <header id="header">
         <div class="navbar">
@@ -96,13 +90,7 @@
         <div class="sidebars_wrapper">
             <div class="sidebar-left">
                 <div class="sidebar-left-wrapper">
-                    <h2>Оформление</h2>
-                    <div class="sidebar-left_list">
-                        <div class="sidebar-left-list-elem">
-                            <h3><a class="navLink" href="#"> Фотозоны</a></h3></div>
-                        <div class="sidebar-left-list-elem">
-                            <h3><a class="navLink" href="#">Оформление интерьеров</a></h3></div>
-                    </div>
+                    <h2>Корзина</h2>
                 </div>
             </div>
             <div class="sidebar-right">
@@ -117,55 +105,47 @@
                               fill="white"/>
                     </svg>
                 </div>
-                <div class="visual__wrapper">
-                    <div class="visual__left">
-                        <div class="visual__slider slider-for">
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie1.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie2.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie3.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie4.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie5.jpg" alt="slider image">
-                            </div>
-                        </div>
-                        <div class="visual__slider slider-nav">
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie1.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie2.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie3.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie4.jpg" alt="slider image">
-                            </div>
-                            <div class="visual__slider__slide">
-                                <img src="public/images/oformlenie5.jpg" alt="slider image">
-                            </div>
-                        </div>
+                <div class="cart__wrapper">
+                    <div class="cart-info">
+                        <table id="cart-table">
+                            <tr>
+                                <th>Изображение</th>
+                                <th>Наименование</th>
+                                <th>Цена</th>
+                                <th>Количество</th>
+                                <th>Стоимость</th>
+                            </tr>
+                            <tr>
+                                <td><img id="cart-img" src="public/images/Rose3.jpg" alt=""></td>
+                                <td>Букет из роз</td>
+                                <td class="">500 грн</td>
+                                <td><span class="count__decrease">-</span>
+                                    <span class="count__sum">5</span>
+                                    <span class="count__increase">+</span>
+                                </td>
+                                <td class="price-num">500 грн</td>
+                            </tr>
+                            <tr>
+                                <td><img id="cart-img" src="public/images/Rose2.jpg" alt=""></td>
+                                <td>Букет из тюльпанов</td>
+                                <td class="">500 грн</td>
+                                <td><span class="count__decrease">-</span>
+                                    <span class="count__sum">5</span>
+                                    <span class="count__increase">+</span>
+                                </td>
+                                <td class="price-num">500 грн</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th class="totalCelText">Итого:</th>
+                                <th class="totalCel">1000 грн</th>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="visual__right">
-                        <div class="product-card__name " id="productName">Оформление фотозоны</div>
-                        <div class="product-card__description">
-                            <span class="product-card__small-text"> Описание</span>
-                            <span id="productDesc">Нежный букет в упаковке из дабл тюльпанов и ароматной сирени. Ножку букета украшает бант из натуральной рафии</span>
-                        </div>
-                        <div class="product-card__prices">
-                            <span class="product-card__small-text">Цена</span>
-                            <span id="productPrice">500 грн</span>
-                        </div>
-
-                        <div class="product-card__btn"><button type="submit" class="product-button-buy">Заказать</button></div>
+                    <div class="google-maps_wrapper">
+                        <div id="map"></div>
                     </div>
                 </div>
             </div>
@@ -183,8 +163,7 @@
     </footer>
 </div>
 <script src="public/js/jquery.js"></script>
-<script type="text/javascript" src="public/js/slick.js"></script>
 <script src="public/js/main.js"></script>
-<script type="text/javascript" src="https://spikmi.com/Widget?Id=603"></script>
+<script type="text/javascript" src="https://spikmi.com/Widget?Id=603" async defer></script>
 </body>
 </html>
