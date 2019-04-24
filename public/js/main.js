@@ -73,202 +73,208 @@ $(document).ready(function () {
     });
 
 
-//googlemaps
-    var map;
 
-    function initMap() {
-        var myLatLng = {lat: 50.014619,  lng: 36.243711};
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: myLatLng,
-            zoom: 17,
-            styles:[
-                {
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#f5f5f5"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#616161"
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
-                            "color": "#f5f5f5"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#bdbdbd"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#eeeeee"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#757575"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#e5e5e5"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#9e9e9e"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#757575"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#dadada"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#616161"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#9e9e9e"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.line",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#e5e5e5"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.station",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#eeeeee"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#c9c9c9"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#9e9e9e"
-                        }
-                    ]
-                }
-            ]
+
+//submenu left
+    $(".mainMenu_elem ul").hide(); // скрываем выпадающее меню
+    $(".mainMenu_elem").click(
+        function (e) {
+            e.preventDefault();
+            $(this).find('ul').addClass('open_submenu').slideToggle();
         });
-        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Магазин Цветочный'  ,
-            disableDefaultUI: true,
-        });
-
-        var contentString = '<div id="content" style="color: #4d4d4d">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Магазин Цветочный</h1>'+
-            '<h3>Режим работы:</h3>'+
-            '<p>пн-сб 10:00 - 20:00</p>'+
-            '<p>вск выходной</p>'+
-            '</div>'+
-            '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-        });
-
-    }
-
 });
+
+//googlemaps
+ function initMap() {
+     var myLatLng = {lat: 50.014619, lng: 36.243711};
+     var map = new google.maps.Map(document.getElementById('map'), {
+         center: myLatLng,
+         zoom: 17,
+         styles: [
+             {
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#f5f5f5"
+                     }
+                 ]
+             },
+             {
+                 "elementType": "labels.icon",
+                 "stylers": [
+                     {
+                         "visibility": "off"
+                     }
+                 ]
+             },
+             {
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#616161"
+                     }
+                 ]
+             },
+             {
+                 "elementType": "labels.text.stroke",
+                 "stylers": [
+                     {
+                         "color": "#f5f5f5"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "administrative.land_parcel",
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#bdbdbd"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "poi",
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#eeeeee"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "poi",
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#757575"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "poi.park",
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#e5e5e5"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "poi.park",
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#9e9e9e"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "road",
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#ffffff"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "road.arterial",
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#757575"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "road.highway",
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#dadada"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "road.highway",
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#616161"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "road.local",
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#9e9e9e"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "transit.line",
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#e5e5e5"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "transit.station",
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#eeeeee"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "water",
+                 "elementType": "geometry",
+                 "stylers": [
+                     {
+                         "color": "#c9c9c9"
+                     }
+                 ]
+             },
+             {
+                 "featureType": "water",
+                 "elementType": "labels.text.fill",
+                 "stylers": [
+                     {
+                         "color": "#9e9e9e"
+                     }
+                 ]
+             }
+         ]
+     });
+     var marker = new google.maps.Marker({
+         position: myLatLng,
+         map: map,
+         title: 'Магазин Цветочный',
+         disableDefaultUI: true,
+     });
+
+     var contentString = '<div id="content" style="color: #4d4d4d">' +
+         '<div id="siteNotice">' +
+         '</div>' +
+         '<h1 id="firstHeading" class="firstHeading">Магазин Цветочный</h1>' +
+         '<h3>Режим работы:</h3>' +
+         '<p>пн-сб 10:00 - 20:00</p>' +
+         '<p>вск выходной</p>' +
+         '</div>' +
+         '</div>';
+
+     var infowindow = new google.maps.InfoWindow({
+         content: contentString
+     });
+
+     marker.addListener('click', function () {
+         infowindow.open(map, marker);
+     });
+
+ }
 
