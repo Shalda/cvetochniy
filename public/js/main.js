@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
     "use strict";
 //hamburger
     document.getElementById(['nav-icon1']).addEventListener("click", toggleClass);
@@ -60,10 +60,13 @@ $(document).ready(function () {
             $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
         });
 //video fullscreen size
-    let video = document.getElementById('video');
-    if (video) {
-        video.style.height = (document.documentElement.clientHeight - 170) + 'px';
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        let video = document.getElementById('video');
+        if (video) {
+            video.style.height = (document.documentElement.clientHeight - 170) + 'px';
+        }
     }
+
 
 //popup
 
@@ -98,61 +101,59 @@ $(document).ready(function () {
         });
 
 
-});
-
-
 // PopUp Form and thank you popup after sending message
-var $popOverlay = $(".consultation_popup-overlay");
-var $popWindow = $(".consultation_popWindow");
-var $subscribeWindow = $(".consultation_subscribe_window");
-var $popThankYouWindow = $(".thank_you_window");
-var $popClose = $(".consultation_close-btn");
-var $popUp = $('#consultationPopup');
-$(function () {
-    // Close Pop-Up after clicking on the button "Close"
-    $popClose.on("click", function () {
-        $popOverlay.fadeOut();
-        $popWindow.fadeOut();
-    });
-
-    // Close Pop-Up after clicking on the Overlay
-    $(document).on("click", function (event) {
-        if ($(event.target).closest($popWindow).length) return;
-        if ($(event.target).closest($popUp).length) return;
-        $popOverlay.fadeOut();
-        $popWindow.fadeOut();
-        event.stopPropagation();
-    });
-
-    // Form Subscribe
-    $(".consultation_subscribe-form").submit(function () {
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "mail.php",
-            data: th.serialize()
-        }).done(function () {
-            // после успешной отправки скрываем форму подписки и выводим окно с благодарностью за заполнение формы
-            $subscribeWindow.fadeOut();
-            $popThankYouWindow.fadeIn();
-            // используем куки на 30 дней, если человек заполнил форму
-            // для куки обязательно должен быть подключен jquery.cookie.min.js
-            //$.cookie('hideTheModal', 'true', { expires: 30 });
-            // очищаем форму
-            setTimeout(function () {
-                th.trigger("reset");
-            }, 1000);
+    var $popOverlay = $(".consultation_popup-overlay");
+    var $popWindow = $(".consultation_popWindow");
+    var $subscribeWindow = $(".consultation_subscribe_window");
+    var $popThankYouWindow = $(".thank_you_window");
+    var $popClose = $(".consultation_close-btn");
+    var $popUp = $('#consultationPopup');
+    $(function () {
+        // Close Pop-Up after clicking on the button "Close"
+        $popClose.on("click", function () {
+            $popOverlay.fadeOut();
+            $popWindow.fadeOut();
         });
-        return false;
+
+        // Close Pop-Up after clicking on the Overlay
+        $(document).on("click", function (event) {
+            if ($(event.target).closest($popWindow).length) return;
+            if ($(event.target).closest($popUp).length) return;
+            $popOverlay.fadeOut();
+            $popWindow.fadeOut();
+            event.stopPropagation();
+        });
+
+        // Form Subscribe
+        $(".consultation_subscribe-form").submit(function () {
+            var th = $(this);
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: th.serialize()
+            }).done(function () {
+                // после успешной отправки скрываем форму подписки и выводим окно с благодарностью за заполнение формы
+                $subscribeWindow.fadeOut();
+                $popThankYouWindow.fadeIn();
+                // используем куки на 30 дней, если человек заполнил форму
+                // для куки обязательно должен быть подключен jquery.cookie.min.js
+                //$.cookie('hideTheModal', 'true', { expires: 30 });
+                // очищаем форму
+                setTimeout(function () {
+                    th.trigger("reset");
+                }, 1000);
+            });
+            return false;
+        });
     });
-});
 
-// используйте этот код, если нужно появление формы без куки
+    // используйте этот код, если нужно появление формы без куки
 
-$popUp.on('click', function () {
-    $popOverlay.fadeIn();
-    $subscribeWindow.fadeIn();
-});
+    $popUp.on('click', function () {
+        $popOverlay.fadeIn();
+        $subscribeWindow.fadeIn();
+    });
+    
 
 
 //googlemaps
