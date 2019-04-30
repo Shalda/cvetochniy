@@ -10,64 +10,62 @@
     }
 
 //text on dropdown menu
-//     document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
-//
-//     function ClassText(e) {
-//         const classMenu = e.target.className;
-//         if (classMenu) {
-//             switch (classMenu) {
-//                 case 'about':
-//                     setTimeout(classTextToogle, 200, 'about');
-//                     break;
-//                 case 'shop':
-//                     setTimeout(classTextToogle, 200, 'shop');
-//                     break;
-//                 case 'cooperation':
-//                     setTimeout(classTextToogle, 200, 'cooperation');
-//                     break;
-//                 case 'delivery':
-//                     setTimeout(classTextToogle, 200, 'delivery');
-//                     break;
-//                 default:
-//                     return;
-//             }
-//         }
-//     }
-//
-//     function classTextToogle(e) {
-//         let olreadyOpen = document.querySelector('.menu_right_text.open');
-//         if (olreadyOpen) {
-//             olreadyOpen.classList.remove('open');
-//         }
-//         document.getElementById(e).classList.add('open');
-//
-//     }
+    document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
+
+    function ClassText(e) {
+        const classMenu = e.target.className;
+        if (classMenu) {
+            switch (classMenu) {
+                case 'about':
+                    setTimeout(classTextToogle, 200, 'about');
+                    break;
+                case 'shop':
+                    setTimeout(classTextToogle, 200, 'shop');
+                    break;
+                case 'cooperation':
+                    setTimeout(classTextToogle, 200, 'cooperation');
+                    break;
+                case 'delivery':
+                    setTimeout(classTextToogle, 200, 'delivery');
+                    break;
+                default:
+                    return;
+            }
+        }
+    }
+
+    function classTextToogle(e) {
+        let olreadyOpen = document.querySelector('.menu_right_text.open');
+        if (olreadyOpen) {
+            olreadyOpen.classList.remove('open');
+        }
+        document.getElementById(e).classList.add('open');
+
+    }
 
     //dropdownmenu mobile
-    //
-    // if (window.matchMedia('(max-width: 768px)').matches) {
-    //     document.querySelector('.shop').setAttribute("href", "shop.html");
-    //     document.getElementById('navMenuLeft').style.height = (document.documentElement.clientHeight - 170) + 'px';
-    // }
 
-    //
-    // $(".dropdownmenuTextMobile").hide(); // скрываем выпадающее меню
-    // $(".nav_menu_left a").click(
-    //     function () {
-    //         if ($('.open_dropmenuMobile') && !(($(this).next().hasClass('open_dropmenuMobile')))) {
-    //             $('.open_dropmenuMobile').slideToggle('slow').toggleClass('open_dropmenuMobile');
-    //         }
-    //         $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
-    //     });
-    //
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        document.querySelector('.shop').setAttribute("href", "shop.html");
+        document.getElementById('navMenuLeft').style.height = (document.documentElement.clientHeight - 170) + 'px';
+    }
 
+
+    $(".dropdownmenuTextMobile").hide(); // скрываем выпадающее меню
+    $(".nav_menu_left a").click(
+        function () {
+            if ($('.open_dropmenuMobile') && !(($(this).next().hasClass('open_dropmenuMobile')))) {
+                $('.open_dropmenuMobile').slideToggle('slow').toggleClass('open_dropmenuMobile');
+            }
+            $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
+        });
 //video fullscreen size
-//     if (window.matchMedia('(min-width: 768px)').matches) {
-//         let video = document.getElementById('video');
-//         if (video) {
-//             video.style.height = (document.documentElement.clientHeight - 170) + 'px';
-//         }
-//     }
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        let video = document.getElementById('video');
+        if (video) {
+            video.style.height = (document.documentElement.clientHeight - 170) + 'px';
+        }
+    }
 
 
 //popup
@@ -104,58 +102,58 @@
 
 
 // PopUp Form and thank you popup after sending message
-//     var $popOverlay = $(".consultation_popup-overlay");
-//     var $popWindow = $(".consultation_popWindow");
-//     var $subscribeWindow = $(".consultation_subscribe_window");
-//     var $popThankYouWindow = $(".thank_you_window");
-//     var $popClose = $(".consultation_close-btn");
-//     var $popUp = $('#consultationPopup');
-//     $(function () {
-//         // Close Pop-Up after clicking on the button "Close"
-//         $popClose.on("click", function () {
-//             $popOverlay.fadeOut();
-//             $popWindow.fadeOut();
-//         });
-//
-//         // Close Pop-Up after clicking on the Overlay
-//         $(document).on("click", function (event) {
-//             if ($(event.target).closest($popWindow).length) return;
-//             if ($(event.target).closest($popUp).length) return;
-//             $popOverlay.fadeOut();
-//             $popWindow.fadeOut();
-//             event.stopPropagation();
-//         });
-//
-//         // Form Subscribe
-//         $(".consultation_subscribe-form").submit(function () {
-//             var th = $(this);
-//             $.ajax({
-//                 type: "POST",
-//                 url: "mail.php",
-//                 data: th.serialize()
-//             }).done(function () {
-//                 // после успешной отправки скрываем форму подписки и выводим окно с благодарностью за заполнение формы
-//                 $subscribeWindow.fadeOut();
-//                 $popThankYouWindow.fadeIn();
-//                 // используем куки на 30 дней, если человек заполнил форму
-//                 // для куки обязательно должен быть подключен jquery.cookie.min.js
-//                 //$.cookie('hideTheModal', 'true', { expires: 30 });
-//                 // очищаем форму
-//                 setTimeout(function () {
-//                     th.trigger("reset");
-//                 }, 1000);
-//             });
-//             return false;
-//         });
-//     });
-//
-//     // используйте этот код, если нужно появление формы без куки
-//
-//     $popUp.on('click', function () {
-//         $popOverlay.fadeIn();
-//         $subscribeWindow.fadeIn();
-//     });
-//
+    var $popOverlay = $(".consultation_popup-overlay");
+    var $popWindow = $(".consultation_popWindow");
+    var $subscribeWindow = $(".consultation_subscribe_window");
+    var $popThankYouWindow = $(".thank_you_window");
+    var $popClose = $(".consultation_close-btn");
+    var $popUp = $('#consultationPopup');
+    $(function () {
+        // Close Pop-Up after clicking on the button "Close"
+        $popClose.on("click", function () {
+            $popOverlay.fadeOut();
+            $popWindow.fadeOut();
+        });
+
+        // Close Pop-Up after clicking on the Overlay
+        $(document).on("click", function (event) {
+            if ($(event.target).closest($popWindow).length) return;
+            if ($(event.target).closest($popUp).length) return;
+            $popOverlay.fadeOut();
+            $popWindow.fadeOut();
+            event.stopPropagation();
+        });
+
+        // Form Subscribe
+        $(".consultation_subscribe-form").submit(function () {
+            var th = $(this);
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: th.serialize()
+            }).done(function () {
+                // после успешной отправки скрываем форму подписки и выводим окно с благодарностью за заполнение формы
+                $subscribeWindow.fadeOut();
+                $popThankYouWindow.fadeIn();
+                // используем куки на 30 дней, если человек заполнил форму
+                // для куки обязательно должен быть подключен jquery.cookie.min.js
+                //$.cookie('hideTheModal', 'true', { expires: 30 });
+                // очищаем форму
+                setTimeout(function () {
+                    th.trigger("reset");
+                }, 1000);
+            });
+            return false;
+        });
+    });
+
+    // используйте этот код, если нужно появление формы без куки
+
+    $popUp.on('click', function () {
+        $popOverlay.fadeIn();
+        $subscribeWindow.fadeIn();
+    });
+
 
 
 //googlemaps
