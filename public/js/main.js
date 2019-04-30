@@ -46,7 +46,7 @@
     //dropdownmenu mobile
 
     if (window.matchMedia('(max-width: 768px)').matches) {
-        document.querySelector('.shop').setAttribute("href", "shop.html");
+        // document.querySelector('.shop').setAttribute("href", "shop.html");
         document.getElementById('navMenuLeft').style.height = (document.documentElement.clientHeight - 170) + 'px';
     }
 
