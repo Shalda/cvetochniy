@@ -60,7 +60,7 @@
             $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
         });
 //video fullscreen size
-    if (window.matchMedia('(min-width: 768px)').matches) {
+    if (window.matchMedia('(min-width: 769px)').matches) {
         let video = document.getElementById('video');
         if (video) {
             video.style.height = (document.documentElement.clientHeight - 170) + 'px';
