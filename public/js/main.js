@@ -50,15 +50,17 @@
     //     document.getElementById('navMenuLeft').style.height = (document.documentElement.clientHeight - 170) + 'px';
     // }
 
+    //
+    // $(".dropdownmenuTextMobile").hide(); // скрываем выпадающее меню
+    // $(".nav_menu_left a").click(
+    //     function () {
+    //         if ($('.open_dropmenuMobile') && !(($(this).next().hasClass('open_dropmenuMobile')))) {
+    //             $('.open_dropmenuMobile').slideToggle('slow').toggleClass('open_dropmenuMobile');
+    //         }
+    //         $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
+    //     });
+    //
 
-    $(".dropdownmenuTextMobile").hide(); // скрываем выпадающее меню
-    $(".nav_menu_left a").click(
-        function () {
-            if ($('.open_dropmenuMobile') && !(($(this).next().hasClass('open_dropmenuMobile')))) {
-                $('.open_dropmenuMobile').slideToggle('slow').toggleClass('open_dropmenuMobile');
-            }
-            $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
-        });
 //video fullscreen size
     if (window.matchMedia('(min-width: 768px)').matches) {
         let video = document.getElementById('video');
