@@ -46,6 +46,10 @@
     //dropdownmenu mobile
 
     if (window.matchMedia('(max-width: 768px)').matches) {
+        let video = document.getElementById('video');
+        if (video) {
+            video.remove();
+        }
         document.querySelector('.shop').setAttribute("href", "shop.html");
         document.getElementById('navMenuLeft').style.height = (document.documentElement.clientHeight - 170) + 'px';
     }
@@ -59,6 +63,7 @@
             }
             $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
         });
+
 //video fullscreen size
     if (window.matchMedia('(min-width: 769px)').matches) {
         let video = document.getElementById('video');
