@@ -1,6 +1,6 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     dropDownMenuHeader();
-    mobileAction();
+    mobileAdaptive();
     videoHeroFullSize();
     popUpImageProduct();
     submenuLeft();
@@ -12,14 +12,21 @@ $( document ).ready(function() {
 function dropDownMenuHeader() {
     //hamburger
     document.getElementById(['nav-icon1']).addEventListener("click", toggleClass);
+
     function toggleClass() {
         this.classList.toggle('open');
         document.getElementById(['nav-menu']).classList.toggle('open');
         document.querySelector('.navbar_menu').classList.toggle('link_disable');
     }
+
     //text on dropdown menu
-    document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
+
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
+
+    }
     function ClassText(e) {
+        e.preventDefault();
         const classMenu = e.target.className;
         if (classMenu) {
             switch (classMenu) {
@@ -40,6 +47,7 @@ function dropDownMenuHeader() {
             }
         }
     }
+
     function classTextToogle(e) {
         let olreadyOpen = document.querySelector('.menu_right_text.open');
         if (olreadyOpen) {
@@ -49,7 +57,7 @@ function dropDownMenuHeader() {
     }
 }
 
-function mobileAction() {
+function mobileAdaptive() {
     if (window.matchMedia('(max-width: 768px)').matches) {
         //video tag delete on main
         let video = document.getElementById('videoHero');
@@ -61,15 +69,6 @@ function mobileAction() {
         //resize dropmenu mobile
         document.getElementById('navMenuLeft').style.height = (document.documentElement.clientHeight - 170) + 'px';
     }
-
-    $(".dropdownmenuTextMobile").hide(); // скрываем выпадающее меню
-    $(".nav_menu_left a").click(
-        function () {
-            if ($('.open_dropmenuMobile') && !(($(this).next().hasClass('open_dropmenuMobile')))) {
-                $('.open_dropmenuMobile').slideToggle('slow').toggleClass('open_dropmenuMobile');
-            }
-            $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
-        });
 }
 
 function videoHeroFullSize() {
