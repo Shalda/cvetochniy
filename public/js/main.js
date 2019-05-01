@@ -1,17 +1,24 @@
+$( document ).ready(function() {
+    dropDownMenuHeader();
+    mobileAction();
+    videoHeroFullSize();
+    popUpImageProduct();
+    submenuLeft();
+    callBackPopUp();
+});
+"use strict";
 
-    "use strict";
-//hamburger
+
+function dropDownMenuHeader() {
+    //hamburger
     document.getElementById(['nav-icon1']).addEventListener("click", toggleClass);
-
     function toggleClass() {
         this.classList.toggle('open');
         document.getElementById(['nav-menu']).classList.toggle('open');
         document.querySelector('.navbar_menu').classList.toggle('link_disable');
     }
-
-//text on dropdown menu
+    //text on dropdown menu
     document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
-
     function ClassText(e) {
         const classMenu = e.target.className;
         if (classMenu) {
@@ -33,27 +40,27 @@
             }
         }
     }
-
     function classTextToogle(e) {
         let olreadyOpen = document.querySelector('.menu_right_text.open');
         if (olreadyOpen) {
             olreadyOpen.classList.remove('open');
         }
         document.getElementById(e).classList.add('open');
-
     }
+}
 
-    //dropdownmenu mobile
-
+function mobileAction() {
     if (window.matchMedia('(max-width: 768px)').matches) {
-        let video = document.getElementById('video');
+        //video tag delete on main
+        let video = document.getElementById('videoHero');
         if (video) {
             video.remove();
         }
+        //shop link on dropdown menu
         document.querySelector('.shop').setAttribute("href", "shop.html");
+        //resize dropmenu mobile
         document.getElementById('navMenuLeft').style.height = (document.documentElement.clientHeight - 170) + 'px';
     }
-
 
     $(".dropdownmenuTextMobile").hide(); // скрываем выпадающее меню
     $(".nav_menu_left a").click(
@@ -63,49 +70,46 @@
             }
             $(this).next('.dropdownmenuTextMobile').toggleClass('open_dropmenuMobile').slideToggle('slow');
         });
+}
 
-//video fullscreen size
+function videoHeroFullSize() {
     if (window.matchMedia('(min-width: 769px)').matches) {
         let video = document.getElementById('video');
         if (video) {
             video.style.height = (document.documentElement.clientHeight - 170) + 'px';
         }
     }
+}
 
-
-//popup
-
+function popUpImageProduct() {
     $('.product-card__img img').click(function () {
         $('.js-overlay-campaign').fadeIn();
         $('.js-overlay-campaign img').attr('src', $(this).attr('src'));
         $('.js-overlay-campaign').addClass('disabled');
-
     });
-
 // закрыть на крестик
     $('.js-close-campaign').click(function () {
         $('.js-overlay-campaign').fadeOut();
-
     });
-
-// закрыть по клику вне окна
+    // закрыть по клику вне окна
     $(document).mouseup(function (e) {
         var popup = $('.js-popup-campaign');
         if (e.target != popup[0] && popup.has(e.target).length === 0) {
             $('.js-overlay-campaign').fadeOut();
         }
     });
+}
 
-
-//submenu left
+function submenuLeft() {
     $(".mainMenu_elem ul").hide(); // скрываем выпадающее меню
     $(".mainMenu_elem").click(
         function (e) {
             e.preventDefault();
             $(this).find('ul').addClass('open_submenu').slideToggle();
         });
+}
 
-
+function callBackPopUp() {
 // PopUp Form and thank you popup after sending message
     var $popOverlay = $(".consultation_popup-overlay");
     var $popWindow = $(".consultation_popWindow");
@@ -152,14 +156,13 @@
         });
     });
 
-    // используйте этот код, если нужно появление формы без куки
+// используйте этот код, если нужно появление формы без куки
 
     $popUp.on('click', function () {
         $popOverlay.fadeIn();
         $subscribeWindow.fadeIn();
     });
-
-
+}
 
 //googlemaps
 function initMap() {
