@@ -5,6 +5,7 @@ $(document).ready(function () {
     popUpImageProduct();
     submenuLeft();
     callBackPopUp();
+    spikmi();
 });
 "use strict";
 
@@ -25,6 +26,7 @@ function dropDownMenuHeader() {
         document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
 
     }
+
     function ClassText(e) {
         e.preventDefault();
         const classMenu = e.target.className;
@@ -161,6 +163,16 @@ function callBackPopUp() {
         $popOverlay.fadeIn();
         $subscribeWindow.fadeIn();
     });
+}
+
+function spikmi() {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        let spikmiElem = document.createElement('script');
+        spikmiElem.setAttribute('type', 'text/javascript');
+        spikmiElem.setAttribute('src', 'https://spikmi.com/Widget?Id=603');
+        let parentBody = document.body;
+        parentBody.appendChild(spikmiElem);
+    }
 }
 
 //googlemaps
