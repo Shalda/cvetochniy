@@ -1,20 +1,23 @@
-$(document).ready(function () {
-    dropDownMenuHeader();
-    mobileAdaptive();
-    videoHeroFullSize();
-    popUpImageProduct();
-    submenuLeft();
-    callBackPopUp();
-    spikmi();
-});
 "use strict";
-
+$(document).ready(function () {
+    dropDownMenuHeader();                   // dropdown menu header
+    mobileAdaptive();                       // some mobile optomization
+    videoHeroFullSize();                    // video resize on main page
+    popUpImageProduct();                    // popup on product page
+    submenuLeft();                          // site left menu
+    callBackPopUp();                        // own callback
+    spikmi();                               // callback from spikmi service
+});
 
 function dropDownMenuHeader() {
     //hamburger
     document.getElementById(['nav-icon1']).addEventListener("click", toggleClass);
 
     function toggleClass() {
+        //spikmi hide when menu slidedown
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            $('div[class$="_root"]').toggle();
+        }
         this.classList.toggle('open');
         document.getElementById(['nav-menu']).classList.toggle('open');
         document.querySelector('.navbar_menu').classList.toggle('link_disable');
@@ -61,6 +64,13 @@ function dropDownMenuHeader() {
 
 function mobileAdaptive() {
     if (window.matchMedia('(max-width: 768px)').matches) {
+        //slice long filter text
+        let filterList = document.querySelectorAll('.filter-catalog .navLink');
+        if (filterList) {
+            for (var i = 0; i < filterList.length; i++) {
+                filterList[i].innerHTML = filterList[i].innerHTML.slice(8);
+            }
+        }
         //video tag delete on main
         let video = document.getElementById('videoHero');
         if (video) {
