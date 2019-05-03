@@ -38,6 +38,12 @@ function dropDownMenuHeader() {
                 case 'about':
                     setTimeout(classTextToogle, 200, 'about');
                     break;
+                case 'weddingLinkMobile':
+                    setTimeout(classTextToogle, 200, 'weddingLinkMobile');
+                    break;
+                case 'visualLinkMobile':
+                    setTimeout(classTextToogle, 200, 'visualLinkMobile');
+                    break;
                 case 'shop':
                     setTimeout(classTextToogle, 200, 'shop');
                     break;
