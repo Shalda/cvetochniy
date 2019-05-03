@@ -29,35 +29,35 @@ function dropDownMenuHeader() {
         document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
     }
 
-    function ClassText(e) {
-        if (window.matchMedia('(min-width: 768px)').matches) { e.preventDefault();}
-        e.preventDefault();
-        const classMenu = e.target.className;
-        if (classMenu) {
-            switch (classMenu) {
-                case 'about':
-                    setTimeout(classTextToogle, 200, 'about');
-                    break;
-                case 'weddingLinkMobile':
-                    setTimeout(classTextToogle, 200, 'weddingLinkMobile');
-                    break;
-                case 'visualLinkMobile':
-                    setTimeout(classTextToogle, 200, 'visualLinkMobile');
-                    break;
-                case 'shop':
-                    setTimeout(classTextToogle, 200, 'shop');
-                    break;
-                case 'cooperation':
-                    setTimeout(classTextToogle, 200, 'cooperation');
-                    break;
-                case 'delivery':
-                    setTimeout(classTextToogle, 200, 'delivery');
-                    break;
-                default:
-                    return;
-            }
-        }
-    }
+    // function ClassText(e) {
+    //     if (window.matchMedia('(min-width: 768px)').matches) { e.preventDefault();}
+    //     e.preventDefault();
+    //     const classMenu = e.target.className;
+    //     if (classMenu) {
+    //         switch (classMenu) {
+    //             case 'about':
+    //                 setTimeout(classTextToogle, 200, 'about');
+    //                 break;
+    //             case 'weddingLinkMobile':
+    //                 setTimeout(classTextToogle, 200, 'weddingLinkMobile');
+    //                 break;
+    //             case 'visualLinkMobile':
+    //                 setTimeout(classTextToogle, 200, 'visualLinkMobile');
+    //                 break;
+    //             case 'shop':
+    //                 setTimeout(classTextToogle, 200, 'shop');
+    //                 break;
+    //             case 'cooperation':
+    //                 setTimeout(classTextToogle, 200, 'cooperation');
+    //                 break;
+    //             case 'delivery':
+    //                 setTimeout(classTextToogle, 200, 'delivery');
+    //                 break;
+    //             default:
+    //                 return;
+    //         }
+    //     }
+    // }
 
     function classTextToogle(e) {
         let olreadyOpen = document.querySelector('.menu_right_text.open');
