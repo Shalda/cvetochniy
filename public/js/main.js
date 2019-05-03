@@ -26,13 +26,15 @@ function dropDownMenuHeader() {
     //text on dropdown menu
 
     if (window.matchMedia('(min-width: 768px)').matches) {
-        document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
+        document.querySelector('.nav_menu_left').addEventListener("mouseover", ClassText);
 
     }
 
     function ClassText(e) {
-        // e.preventDefault();
+
+        e.preventDefault();
         const classMenu = e.target.className;
+        console.log(classMenu);
         if (classMenu) {
             switch (classMenu) {
                 case 'about':
