@@ -31,7 +31,7 @@ function dropDownMenuHeader() {
     }
 
     function ClassText(e) {
-        e.preventDefault();
+        // e.preventDefault();
         const classMenu = e.target.className;
         if (classMenu) {
             switch (classMenu) {
