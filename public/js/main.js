@@ -1,4 +1,5 @@
 "use strict";
+
 $(document).ready(function () {
     dropDownMenuHeader();                   // dropdown menu header
     mobileAdaptive();                       // some mobile optomization
@@ -24,10 +25,10 @@ function dropDownMenuHeader() {
     }
 
     //text on dropdown menu
-
-    if (window.matchMedia('(min-width: 769px)').matches) {
-        document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
-    }
+   
+    if(window.matchMedia('all and(min-width: 769px)').matches) {
+      document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
+   }
 
     function ClassText(e) {
         e.preventDefault();
@@ -35,6 +36,7 @@ function dropDownMenuHeader() {
         if (classMenu) {
             switch (classMenu) {
                 case 'about':
+                    console.log('about');
                     setTimeout(classTextToogle, 200, 'about');
                     break;
                 case 'weddingLinkMobile':
