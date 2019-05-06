@@ -36,7 +36,6 @@ function dropDownMenuHeader() {
         if (classMenu) {
             switch (classMenu) {
                 case 'about':
-                    console.log('about');
                     setTimeout(classTextToogle, 200, 'about');
                     break;
                 case 'weddingLinkMobile':
