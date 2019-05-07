@@ -124,49 +124,52 @@
                 </div>
                 <div class="cart__wrapper">
                     <div class="cart-info">
-                        <table id="cart-table">
-                            <tr class="table-th-fullSize">
-                                <th>Изображение</th>
-                                <th>Наименование</th>
-                                <th>Цена</th>
-                                <th>Количество</th>
-                                <th>Стоимость</th>
-                            </tr>
-                            <tr class="table-th-mobile">
-                                <th></th>
-                                <th></th>
-                                <th>Цена</th>
-                                <th>Кол-во</th>
-                                <th>Ст-сть</th>
-                            </tr>
-                            <tr>
-                                <td><img id="cart-img" src="public/images/Rose3.jpg" alt=""></td>
-                                <td class="cart-product-title" >Букет из роз</td>
-                                <td class="cart-price">500 грн</td>
-                                <td><span class="count__decrease">-</span>
+                        <div id="cart-table">
+                            <div class="table-cart-titles table-cart-fullSize">
+                                <span class=" cart-img-title"></span>
+                                <span class=" cart-title-title">Наименование</span>
+                                <span class=" cart-price-title">Цена</span>
+                                <span class=" cart-count-title">Количество</span>
+                                <span class=" cart-price-title">Стоимость</span>
+                            </div>
+                            <div class="table-cart-titles table-cart-mobile">
+                                <span class=" cart-img-title"></span>
+                                <span class=" cart-title-title"></span>
+                                <span class=" cart-price-title">Цена</span>
+                                <span class=" cart-count-title">Кол-во</span>
+                                <span class=" cart-price-title">Ст-ть</span>
+                            </div>
+                            <div class="cart-elems">
+                                <div class="cart-elem cart-product-img cart-img-title"><img id="cart-img"
+                                                                                            src="public/images/Rose3.jpg"
+                                                                                            alt=""></div>
+                                <div class="cart-elem cart-product-title cart-title-title">Букет из роз</div>
+                                <div class="cart-elem cart-price cart-price-title">500 грн</div>
+                                <div class="cart-elem cart-count-nav cart-count-title">
+                                    <span class="count__decrease">-</span>
                                     <span class="count__sum">5</span>
                                     <span class="count__increase">+</span>
-                                </td>
-                                <td class="price-num">500 грн</td>
-                            </tr>
-                            <tr>
-                                <td><img id="cart-img" src="public/images/Rose2.jpg" alt=""></td>
-                                <td class="cart-product-title"> Букет из тюльпанов</td>
-                                <td class="cart-price">500 грн</td>
-                                <td><span class="count__decrease">-</span>
+                                </div>
+                                <div class="cart-elem price-num cart-price-title">500 грн</div>
+                            </div>
+                            <div class="cart-elems">
+                                <div class="cart-elem cart-product-img cart-img-title"><img id="cart-img"
+                                                                                            src="public/images/Rose2.jpg"
+                                                                                            alt=""></div>
+                                <div class="cart-elem cart-product-title cart-title-title">Букет из роз</div>
+                                <div class="cart-elem cart-price cart-price-title">500 грн</div>
+                                <div class="cart-elem cart-count-nav cart-count-title">
+                                    <span class="count__decrease">-</span>
                                     <span class="count__sum">5</span>
                                     <span class="count__increase">+</span>
-                                </td>
-                                <td class="price-num">500 грн</td>
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th class="totalCelText">Итого:</th>
-                                <th class="totalCel">1000 грн</th>
-                            </tr>
-                        </table>
+                                </div>
+                                <div class="cart-elem price-num cart-price-title">500 грн</div>
+                            </div>
+                            <div class="cart-total-price">
+                                <span class="totalCelText">Итого:</span>
+                                <span class="totalCel">1000 грн</span>
+                            </div>
+                        </div>
                         <div class="cart-buttons_wrapper">
                             <button type="submit" class="cart-button">Продолжить покупки</button>
                             <button type="submit" class="cart-button">Оформить заказ</button>
