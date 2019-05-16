@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Цветочный - доставка</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="public/css/style.css">
@@ -26,6 +27,7 @@
                 </div>
                 <div class="navbar_elem navbar_cart">
                     <a href="cart.html">
+                        <span class="navbar_cart-counter"> 1 </span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="20" height="20" fill="url(#pattern0)"/>
@@ -103,12 +105,129 @@
             </div>
         </div>
     </header>
-    <section class="textMobileMenuSection">
-        <div class="textMobileMenu delivery_mobile">
-            <h3>Доставка курьреом</h3>
-            <span>Харькову - 50 гривен</span>
-            <span>за город - 50 гривен</span>
-            <span>Бесплатная доставка <strong>от 1000 гривен</strong></span>
+    <section>
+        <div class="order_top_wrapper sidebars_wrapper ">
+            <div class="sidebar-left">
+                <div class="sidebar-left-wrapper">
+                    <h2>Оформление заказа</h2>
+                </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="back-link_wrapper">
+                    <a href="#" class="previous-round" onclick="history.back(); return false;">&#8249;</a>
+                    <a class="back-link" onclick="history.back(); return false;">
+                        назад
+                    </a>
+                    <svg class="arrow-svg" width="60" height="8" viewBox="0 0 60 8" fill="black"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.75"
+                              d="M0.646446 3.64644C0.451183 3.8417 0.451183 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02368 4.53553 6.82842L1.70711 3.99999L4.53553 1.17157C4.7308 0.976306 4.7308 0.659723 4.53553 0.464461C4.34027 0.269199 4.02369 0.269199 3.82843 0.464461L0.646446 3.64644ZM60 3.5L1 3.49999L1 4.49999L60 4.5L60 3.5Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="order_bottom_wrapper">
+            <div class="order-product-wrapper">
+                <div class="order-tittle">Ваш заказ</div>
+                <div class="order-product-info-box">
+                    <div class="order-product-info">
+                        <div class="order-elem order-product-img">
+                            <img id="order-img" src="public/images/Rose1.jpg" alt="Rose3">
+                        </div>
+                        <div class="order-elem order-product-title">
+                            <span>Букет из тюльпанов</span>
+                        </div>
+                        <div class="order-elem order-count">
+                            <span class="">&nbsp;x&nbsp;</span>
+                            <span class="order-count-num">&nbsp;5&nbsp;</span>
+                        </div>
+                        <div class="order-elem order-price-num ">
+                            <span>500 грн</span>
+                        </div>
+                    </div>
+                    <div class="order-product-info">
+                        <div class="order-elem order-product-img">
+                            <img id="order-img" src="public/images/Rose2.jpg" alt="Rose3">
+                        </div>
+                        <div class="order-elem order-product-title">
+                            <span>Букет из роз</span>
+                        </div>
+                        <div class="order-elem order-count">
+                            <span class="">&nbsp;x&nbsp;</span>
+                            <span class="order-count-num">&nbsp;5&nbsp;</span>
+                        </div>
+                        <div class="order-elem order-price-num ">
+                            <span>500 грн</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-total-price">
+                    <span>Итого: </span><span>1000 грн</span>
+                </div>
+            </div>
+            <div class="order-center-line"></div>
+            <div class="order-costumer-form-wrapper">
+                <div class="order-tittle">Ваши данные</div>
+
+                <div class="order-product-form-box">
+                    <form id="orderForm">
+                        <div role="group">
+                            <p><label for="name">Ваше Имя: <em>*</em></label><input type="text" id="name"></p>
+                            <p><label for="phone">Ваш номер телефона: <em>*</em></label><input type="tel" id="phone">
+                            </p>
+                        </div>
+                        <div role="group">
+                            <p><label for="deliveryWay">Способ доставки: <em>*</em></label>
+                                <select id='deliveryWay'>
+                                    <option data="solo">Самостоятельно из магазина</option>
+                                    <option data="courier">Доставка курьером</option>
+                                </select>
+                            </p>
+                            <p><label for="paymentWay">Способ оплаты: <em>*</em></label>
+                                <select id='paymentWay'>
+                                    <option selected>Наличными</option>
+                                    <option>Перевод на карту</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div role="group" class="delivery-address">
+                            <p><label for="deliveryAddress">Адрес доставки: <em>*</em></label><input type="text"
+                                                                                                     id="deliveryAddress"
+                                                                                                     placeholder="улица, дом, кв">
+                            </p>
+                            <p><label for="time">Время доставки: <em>*</em></label>
+                                <input type="text" id="time"
+                                       class="datepicker-here"
+                                       data-timepicker="true"
+                                />
+                            </p>
+                        </div>
+                        <div role="group" class="receiver-box">
+                            <p>Получатель:</p>
+                            <input class="receiver-solo" value="solo" id='receiverSolo' type="radio" checked
+                                   name="dva"/>
+                            <label for="receiverSolo">Вы лично</label>
+                            <input class="receiver-friend" value="friend" id='receiverFriend' type="radio" name="dva"/>
+                            <label for="receiverFriend">Другой человек</label>
+                            <div class="friend-delivery">
+                                <p><label for="friendName">Имя Получателя: <em>*</em></label>
+                                    <input type="text" id="friendName">
+                                </p>
+                                <p><label for="friendPhone">Номер телефона получателя: </label>
+                                    <input type="tel" id="friendPhone">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="order-btn-wrapper">
+                            <button type="submit" class="order-btn ">Заказать</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </div>
     </section>
     <footer id="footer">
@@ -182,6 +301,7 @@
     </footer>
 </div>
 <script src="public/js/jquery.js"></script>
+<script src="public/js/datepicker.min.js"></script>
 <script src="public/js/main.js"></script>
 </body>
 </html>

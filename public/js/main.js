@@ -8,6 +8,7 @@ $(document).ready(function () {
     submenuLeft();                          // site left menu
     callBackPopUp();                        // own callback
     spikmi();                               // callback from spikmi service
+    deliverySelect()
 });
 
 function dropDownMenuHeader() {
@@ -25,10 +26,10 @@ function dropDownMenuHeader() {
     }
 
     //text on dropdown menu
-   
-    if(window.matchMedia('all and(min-width: 769px)').matches) {
-      document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
-   }
+
+    if (window.matchMedia('all and(min-width: 769px)').matches) {
+        document.querySelector('.nav_menu_left').addEventListener("click", ClassText);
+    }
 
     function ClassText(e) {
         e.preventDefault();
@@ -189,6 +190,29 @@ function spikmi() {
         let parentBody = document.body;
         parentBody.appendChild(spikmiElem);
     }
+}
+
+function deliverySelect() {
+    var deliveryAddressElem = $(".delivery-address");
+    var friendDeliveryElem = $(".friend-delivery");
+    friendDeliveryElem.hide();
+    deliveryAddressElem.hide();
+
+    $(".receiver-box input").on("click", function () {
+        var checkedVal = $(".receiver-box input:checked").val()
+        if (checkedVal == "friend") {
+
+            friendDeliveryElem.slideDown();
+        } else friendDeliveryElem.slideUp();
+    });
+
+    $("#deliveryWay").change(function () {
+        var val = $(this).val();
+        if (val == "Доставка курьером") {
+            deliveryAddressElem.slideDown();
+        } else deliveryAddressElem.slideUp();
+    });
+
 }
 
 //googlemaps
